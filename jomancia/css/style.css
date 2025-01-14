@@ -1,0 +1,475 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-color: #000;
+    font-family: 'Roboto',sans-serif;
+}
+
+
+.flex{
+    display: flex;
+}
+
+/*===================SCROL==========
+
+.efeito-txt-topo, .efeito-img-topo, .titulo, .especialidades1,
+.especialidades2,.especialidades3, .efeito-img-sobre, .efeito-txt-sobre
+{
+    visibility: hidden;
+}
+/*===================SCROL==========*/
+
+header{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    height: 80px;    
+}
+
+h2.titulo{
+    color: white;
+    font-size: 38px;
+    text-align: center;
+    font-family: Calibri;
+    text-transform: uppercase;
+}
+
+h2.titulo span{
+    color: #e78ae1;
+}
+
+.logo{
+    display: flex;
+    margin-top: 1%;
+    align-items: center;
+}
+
+header nav{
+   display: flex;
+   text-align: center;
+}
+
+header nav ul{
+    display: flex;
+}
+
+header nav ul li{
+    list-style: none;
+    padding: 10px 20px;
+    display: inline-block;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-family: Calibri, Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    align-items: center;
+    padding: 15px;
+    transition: .2;
+}
+
+header nav ul li a:hover{
+    transform: scale(1.05s);
+    color: #e78ae1;
+}
+/*========Botao whatsap & Animacao=======*/
+header button{
+    border: none;
+    border-radius: 20px;
+    padding: 15px;
+    font-size: 16px;
+    font-family: Arial;
+    font-weight: 700;
+    background: #e78ae1;
+    color: #fff;
+    width: 10%;
+    cursor: pointer;
+}
+
+@keyframes btn{
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.05);
+    }
+}
+
+button:hover{
+    /*Nome da anmacao*/
+    animation-name: btn;
+    /*tempo de duracao pra animacao estar concluido*/
+    animation-duration: 0.5s;
+    /*Suavidade da animacao*/
+    animation-timing-function: ease-out;
+    /* vezes da animacao se repetir*/
+    animation-iteration-count: infinite;
+    /*Acontecimento da animacao.....frente pra tras ou 0 a 100 ou 100 a 0*/
+    animation-direction: alternate;
+}
+
+/*========FIM BOTAO=======*/
+/*========FIM NAVEGACAO=======*/
+
+/*=========MAIN=========*/
+
+section.topo-site{
+    padding: 12% 4%;
+}
+
+section.topo-site .flex{
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+
+.topo-site h1{
+    color: #fff;
+    font-size: 30px;
+    text-transform: uppercase;
+    line-height: 40px;
+    font-family: Calibri, Helvetica, sans-serif;
+}
+p{
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.topo-site .txt-topo-site h1 span{
+    color: #e78ae1;
+}
+
+.topo-site .txt-topo-site p{
+    color: #fff;
+    margin: 40px 0px;
+}
+
+.btn-contato button{
+    padding: 10px 25px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #e78ae1;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.btn-contato button:hover{
+    box-shadow: 0px 0px 8px #e78ae1;
+}
+
+.topo-site .img-site img{
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+    
+}
+
+@keyframes flutuar{
+    0%{
+        top: 0;
+        
+    }
+    100%{
+        top: 30px;
+    }
+}
+
+/*======  Espeicialidades ======*/
+section.especialidades{
+     padding: 40px 4%;
+}
+
+section.especialidades .flex{
+gap: 60px;
+}
+
+.especialidades .minha-Especial{
+    color: #e78ae1;
+    padding: 40px;
+    border-radius: 20px;
+    margin-top: 45px;
+    transition: .2s;
+}
+
+.especialidades .minha-Especial:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #ffffff78;
+}
+
+.especialidades .minha-Especial i{
+    font-size: 70px;
+    color: #e78ae1;
+}
+
+.especialidades .minha-Especial h3{
+    font-size: 26px;
+    margin: 15px 0;
+}
+
+/*========== SOBRE SITE ======*/
+section.sobre{
+    padding: 80px 4%;
+}
+
+section.sobre .flex{
+    gap: 60px;
+    align-items: center;
+}
+.sobre .txt-sobre{
+    color: #fff;
+}
+.sobre .txt-sobre h2{
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 30px;
+    font-family: sans-serif, Calibri;
+}
+.sobre .txt-sobre h2 span{
+    color: #e78ae1;
+    display: block;
+}
+
+.sobre .txt-sobre p{
+    margin: 20px 0;
+    text-align: justify;
+}
+
+.sobre .txt-sobre .btn-social button{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background-color: #e78ae1;
+    font-size: 22px;
+    cursor: pointer;
+    margin: 0px 5px;
+}
+/*========== FIM DO SOBRE SITE ======*/
+
+/*Portofolio*/
+
+section.port{
+    padding: 80px 4%;
+    box-shadow: 0 0 40px 10px #ffffff1d;
+    
+}
+
+section.port .flex{
+    justify-content: space-around;
+    margin-top: 60px;
+}
+.img-port{
+    width: 360px;
+    height: 460px;
+    background-size: cover;
+    background-position: 100% 0%;
+    transition: 8s;
+    cursor: pointer;
+    border-radius: 20px;
+    position: relative;
+}
+
+.img-port:hover{
+    background-position: 100% 100%;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000b8;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 600;
+    opacity: 0;
+    transition: .5s;
+    color: #fff;
+}
+
+.overlay:hover{
+    opacity: 1;
+}
+
+/*FIM Portogolio*/
+
+/*formulario*/
+section.formulario{
+    padding: 80px 4%;
+    
+}
+
+form{
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 60px;
+}
+
+form input{
+    width: 100%;
+    background-color: #242424;
+    border: 0; 
+    outline: 0;
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 18px;
+}
+
+
+form input, form textarea{
+    width: 100%;
+    background-color: #242424;
+    border: 0; 
+    outline: 0;
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 18px;
+}
+
+form textarea{
+    resize: none;
+    max-height: 200px;
+}
+
+form .btn-enviar{
+    margin-top: 20px;
+    text-align: center;
+}
+
+form .btn-enviar input{
+    width: 120px;
+    background-color: #e78ae1;
+    color: #000;
+    font-weight: 700;
+    cursor: pointer;
+}
+/*FIM Formulario*/
+
+/*footer*/
+ footer{
+    padding: 40px 4%;
+    box-shadow: 0 0 40px 10px;
+ }
+
+ footer .flex{
+    justify-content: space-between;
+ }
+
+ footer .linha-footer{
+    padding: 20px 0;
+    
+ }
+
+ .borda{
+    border-top: 2px solid #e78ae1;
+ }
+
+ footer .linha-footer p i{
+    color: #e78ae1;
+    font-size: 22px;
+}
+
+footer .linha-footer p a{
+    color: #fff;
+}
+
+.btn-social button{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background-color: #e78ae1;
+    font-size: 22px;
+    cursor: pointer;
+    margin: 0px 5px;
+}
+/*Fim footer*/
+
+/*Resposividade Mquery*/
+
+@media screen and (max-width:1008px){
+    /*Gerais*/
+    .flex{
+        flex-direction: column-reverse;   
+    }
+
+    h2.titulo{
+        font-size: 34px;
+        line-height: 30px;
+    }
+
+    /*Navegacao*/
+    .nav, .btn-contato{
+        display: none;
+    }
+
+    /*TOPO DO SITE*/
+    section.topo-site .flex{
+        gap: 40px;
+    }
+    section.topo-site{
+        padding: 20px 8%;
+    }
+
+    .topo-site h1{
+        font-size: 30px;
+    }
+    .topo-site .img-site img{
+        width: 100%;
+    }
+
+    /*Minhas especialidade*/
+    section.especialidades{
+        padding: 40px 8%;
+    }
+
+    /*Sobre*/
+    
+    section.sobre{
+        padding: 80px 8%;
+    }
+
+    .sobre .txt-sobre h2{
+        font-size: 34px;
+        line-height: 35px;
+        text-align: center;
+    }
+
+    .btn-social{
+        text-align: center;
+    }
+
+    .img-sobre img{
+        width: 100%;
+    }
+
+    /*PORTFOLIO*/
+
+    /**/
+    /**/
+    /**/
+    /**/
+    /**/
+    /**/
+    /**/
+}
+
+/*=========FIM MAIN=========*/
